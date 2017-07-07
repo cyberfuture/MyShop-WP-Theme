@@ -1,0 +1,70 @@
+/* CSS Document */
+@charset "UTF-8";
+/*
+Theme Name: MyShop
+Theme URI: 
+Author: Sandra Konechy
+Author URI: http://www.sandrakonechy.com
+Description: A handcrafted shopping theme.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: 
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+a {
+	color: #ec2c2f;
+}
+a:hover {
+	color: #333;
+}
+.button {
+	background: #ec2c2f;
+	border-bottom: 3px #333 solid;
+}
+.button:hover {
+	background: #333;
+}
+header {
+	margin-bottom: 20px;
+}
+
+header .main-nav {
+	float: right;
+	margin-top: 30px;
+	font-size: 18px;
+}
+header .main-nav li {
+	padding-left: 20px;
+}
+.showcase .callout {
+	text-align: center;
+	padding: 30px;
+	margin-bottom: 20px;
+}
+.products .columns {
+	margin-bottom: 40px;
+}
+.product {
+	text-align: center;
+}
+.product .button {
+	margin-top: 10px;
+}
+.vertical li {
+	border-bottom: 1px #ccc solid;
+}
+.vertical li:last-child {
+	border-bottom: none;
+}
+footer {
+	background: #333;
+	color: #fff;
+	text-align: center;
+	margin-top: 30px;
+	padding-top:20px;
+	height: 70px;
+}
