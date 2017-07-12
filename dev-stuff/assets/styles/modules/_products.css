@@ -1,0 +1,14 @@
+.products {
+	}
+.product {
+	text-align: center;
+    
+    &__button--top-margin {
+        margin-top: 10px;
+    }
+    
+    &--columns {
+        margin-bottom: 40px;
+    }
+    
+}

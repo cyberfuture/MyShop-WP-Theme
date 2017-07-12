@@ -1,0 +1,8 @@
+.button {
+    background-color: $redColor;
+    border-bottom: 3px $dkGray solid;
+    
+    &:hover {
+	background-color: $dkGray;
+    }
+}
