@@ -6,31 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php bloginfo('name'); ?></title>
     <link rel="stylesheet" href="<?php echo bloginfo('stylesheet_url'); ?>">
+    <?php wp_head(); ?>
   </head>
-  <body>
-    <header class="row">
+  <body <?php body_class(); ?>>
+    <div class="site-header row">
       <div class="large-6 columns">
-        <img src="img/logo.jpg" />
+        <?php
+          if(function_exists('the_custom_logo')) {
+              the_custom_logo();
+          }
+          ?>
       </div>
       <div class="large-6 columns">
-        <ul class="menu simple main-nav">
-        	<li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="index.html">Services</a></li>
-        </ul>
+          <?php wp_nav_menu(array(
+            'theme_location' => 'primary',
+            'container_class' => 'menu simple main-nav site-header__main-nav'
+            )); ?>
       </div>
-    </header>
-
+    </div>
+      <?php if(is_active_sidebar('showcase')) : ?>
     <div class="row showcase">
       <div class="large-12 columns">
-        <div class="callout secondary">
-          <h1>Discount Clothing</h1>
-          <p>Yeah, I like animals better than people sometimes... Especially dogs. Dogs are the best. Every time you come home, they act like they haven't seen you in a year. And the good thing about dogs... is they got different dogs for different people. Like pit bulls. The dog of dogs. Pit bull can be the right man's best friend... or the wrong man's worst enemy. You going to give me a dog for a pet, give me a pit bull. Give me... Raoul. Right, Omar? Give me Raoul.</p>
-          <button class="button">Start Shopping</button>
+        <div class="callout showcase__callout secondary">
+          <?php dynamic_sidebar('showcase'); ?>
         </div>
       </div>
     </div>
-
+      <?php endif; ?>
     <div class="row">
       <div class="large-8 medium-8 columns">
       	<div class="products">
@@ -88,10 +90,10 @@
     <footer>
     	<p>&copy; 2017 - MyShop
     </footer>
-
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/vendor/what-input.js"></script>
-    <script src="js/vendor/foundation.js"></script>
-    <script src="js/app.js"></script>
+    <?php wp_footer(); ?>
+    <script src="dev-stuff/assets/js/vendor/jquery.js"></script>
+    <script src="dev-stuff/assets/js/vendor/what-input.js"></script>
+    <script src="dev-stuff/assets/js/vendor/foundation.js"></script>
+    <script src="dev-stuff/assets/js/app.js"></script>
   </body>
 </html>
