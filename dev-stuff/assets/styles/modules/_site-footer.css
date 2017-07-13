@@ -1,6 +1,6 @@
 .site-footer {
     background: $dkGray;
-	color: #whiteColor;
+	color: $whiteColor;
 	text-align: center;
 	margin-top: 30px;
 	padding-top:20px;

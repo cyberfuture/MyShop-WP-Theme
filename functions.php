@@ -1,15 +1,21 @@
 <?php
-	// Theme Support
-	function ms_theme_setup(){
-		add_theme_support('custom-logo');
+require_once('widgets/class-wp-widget-categories.php');
 
-		// Nav Menus
-		register_nav_menus(array(
-			'primary' => __('Primary Menu')
-		));
-	}
+// Theme Support
+function ms_theme_setup(){
+    // Site Logo
+    add_theme_support('custom-logo');
+        
+     // Feature Image Support
+    add_theme_support('post-thumbnails');
 
-	add_action('after_setup_theme', 'ms_theme_setup');
+    // Nav Menus
+    register_nav_menus(array(
+        'primary' => __('Primary Menu')
+    ));
+}
+
+add_action('after_setup_theme', 'ms_theme_setup');
 
 // Widget Locations
 function ms_init_widgets($id){
@@ -33,3 +39,10 @@ function ms_init_widgets($id){
 }
 
 add_action('widgets_init', 'ms_init_widgets');
+
+//Register Widgets
+function ms_register_widgets() {
+    register_widget('WP_Widget_Categories_Custom');
+}
+
+add_action('widgets_init', 'ms_register_widgets');

@@ -1,10 +1,7 @@
-.callout {
-    
-    &__list-item--bottom-border {
-        border-bottom: 1px $ltGray solid;
+.vertical li {
+    border-bottom: 1px $ltGray solid;
+}
         
-        &:last-child {
-        	border-bottom: none;
-        }
-    }
+.vertical li:last-child {
+    border-bottom: none;
 }
