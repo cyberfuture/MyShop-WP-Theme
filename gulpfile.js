@@ -1,4 +1,5 @@
 require('./gulp/tasks/styles');
+require('./gulp/tasks/build');
 /* require('./devStuff/gulp/tasks/watch');
 require('./devStuff/gulp/tasks/sprite');
 require('./devStuff/gulp/tasks/scripts');
